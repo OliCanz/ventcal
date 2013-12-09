@@ -42,7 +42,7 @@
 </div> <!--! end of #container -->
 
 <!-- Javascript at the bottom for fast page loading -->
-<script type="text/javascript" src="/ventcal/assets/js/libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/libs/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	$('.submit_button').click(function() {
