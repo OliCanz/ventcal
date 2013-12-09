@@ -3,7 +3,7 @@
 class Vent_calendar extends My_Model {
 
 	function getAll() {
-		$q = $this->db->query("SELECT * FROM posts");
+		$q = $this->db->query("SELECT * FROM posts ORDER BY id DESC");
 		if($q->num_rows() > 0){
 			foreach($q->result() as $row){
 				$data[] = $row;
@@ -13,12 +13,14 @@ class Vent_calendar extends My_Model {
 	}
 
 	function insert_post() {
-	    $this->load->database();
-	    $id = $this->input->post('id');     
+	    $vent_desc = $this->input->post('vent_desc');
+	    $date = date("d-m-Y");
+
 	    $data = array(
-	       'name' => $this->input->post('name'),
-	       'age' => $this->input->post('age'),
-    );
-    $this->db->insert('posts',$data);
+	       'post_desc' => $vent_desc,
+	       'date' => $date
+    	);
+
+    	$this->db->insert('posts', $data);
 	}
 }

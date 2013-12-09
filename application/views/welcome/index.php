@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		<div class="span12 text-center">
-			<form>
+			<form id="form" method="post" action="/ventcal/post">
 				<div class="textbox">
 					<textarea  name="vent_desc"></textarea>
 				</div>
@@ -15,7 +15,7 @@
 	</div>
 	<div class="row">
 		<div class="span12 text-center">
-			<a href="#"><img src="assets/img/vent.jpg" /></a>
+			<a href="#" class="submit_button"><img src="assets/img/vent.jpg" /></a>
 		</div>
 	</div>
 	

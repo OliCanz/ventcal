@@ -34,7 +34,7 @@
 	<footer class="container">
 		<div class="row">
 			<div class="span12">
-				FOOTER!!!
+				<p>Just-Vent-Calendar &copy; <?php echo date('Y'); ?></p>
 			</div>
 		</div>
 	</footer>
@@ -42,6 +42,13 @@
 </div> <!--! end of #container -->
 
 <!-- Javascript at the bottom for fast page loading -->
-
+<script type="text/javascript" src="/ventcal/assets/js/libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.submit_button').click(function() {
+		$('#form').submit();
+	});
+});
+</script>
 </body>
 </html>

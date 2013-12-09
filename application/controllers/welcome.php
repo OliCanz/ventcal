@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends MY_Controller {
+
 	function index() {
 		$this->load->model('vent_calendar');
 		$data['rows'] = $this->vent_calendar->getAll();
@@ -8,6 +9,12 @@ class Welcome extends MY_Controller {
 		$this->data = array(
 			'posts' => $data['rows']
 		);
+	}
+
+	function post() {
+		$this->load->model('vent_calendar');
+		$this->vent_calendar->insert_post();
+		redirect('/');
 	}
 }
 
