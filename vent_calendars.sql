@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 09, 2013 at 06:26 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Dec 09, 2013 at 10:50 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,17 +31,28 @@ USE `vent_calendars`;
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_desc` longtext NOT NULL,
-  `date` date NOT NULL,
+  `date` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `post_desc`, `date`) VALUES
-(1, 'wef wef wef wef wef wef', '2013-12-09'),
-(2, '1231264574567 567 567 567', '2013-12-09');
+(1, 'wef wef wef wef wef wef', '2013-12-09 00:00:00'),
+(2, '1231264574567 567 567 567', '2013-12-09 00:00:00'),
+(3, 'hihihihihi', '0000-00-00 00:00:00'),
+(4, 'hihihihi', '0000-00-00 00:00:00'),
+(5, 'werwerwerr wer wer wer w', '0000-00-00 00:00:00'),
+(6, 'test', '2013-12-09 00:00:00'),
+(7, 'Test', '0000-00-00 00:00:00'),
+(8, 'fefe', '0000-00-00 00:00:00'),
+(9, 'efef', '2013-12-09 00:00:00'),
+(10, 'tertewet', '2013-12-09 00:00:00'),
+(11, 'fefe', '0000-00-00 00:00:00'),
+(12, 'wtwetwef wef', 'Mon'),
+(13, 'wefwe f', '09-12-2013');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
